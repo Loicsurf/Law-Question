@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="description" name="description">
+    <meta name="google" content="notranslate" />
+    <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+    <!-- Disable tap highlight on IE -->
+
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link href="{% static 'assets/apple-touch-icon.png' %}" rel="apple-touch-icon">
+    <link href="{% static 'assets/favicon.ico' %}" rel="icon">
+    <link href="{% static 'css/main.a3f694c0.css' %}" rel="stylesheet">
+
+    <!-- bootstrap intergration -->
+
+
+
+    <title>{% block title %} Questions and Answer guide {% endblock %} </title>
+
+    <link href="{% static 'css/main.a3f694c0.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/cards.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="">
+    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="">
+</head>
+<body bg-primary>
+
+    <!-- Add your content of header -->
+    <header>
+        <nav class="navbar  navbar-fixed-top navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle uarr collapsed" data-toggle="collapse" data-target="#navbar-collapse-uarr">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+                    <a class="navbar-brand" href="{% url 'home' %}" title="">
+                        <img src="{% static 'assets/images/mashuptemplate.svg' %}" class="navbar-logo-img" alt="">
+                        <b>Law Questions </b>
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-collapse-uarr">
+                    <ul class="nav navbar-nav navbar-right text-primary">
+                        <li><a href="{% url 'home' %}" title="" class="active-head">Home</a></li>
+                        <li><a href="{% url 'about' %}" title=""> About</a></li>
+                        <li><a href="{% url 'pdf1' %}" title="">PDFs </a></li>
+                        <li><a href="{% url 'contact' %}" title="">Contact</a></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+        {% block content %}
+        {% include 'footer.html' %}
+        {% endblock %}
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                navActivePage();
+            });
+        </script>
+
+        <script type="text/javascript" src="{% static 'js/main.41beeca9.js' %}"></script>
+</body>
+
+</html>

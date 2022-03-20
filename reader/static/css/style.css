@@ -1,0 +1,39 @@
+.internal-questions {
+    display: flex;
+}
+
+.button {
+    float: end;
+}
+
+.button {
+    float: right;
+}
+
+.justify {
+    justify-content: space-between;
+}
+
+.position {
+    margin-top: -60px;
+}
+
+.text {
+    font-size: 20px;
+}
+
+.question {
+    display: block;
+    line-height: 20px;
+}
+
+.button-margin {
+    margin-top: 20px;
+}
+
+.active-head {
+    color: darkviolet;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 17px;
+}

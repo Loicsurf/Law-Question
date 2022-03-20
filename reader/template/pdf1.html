@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% for pdf in pdf %}
+<br><br>
+<main style="display: flex;flex-direction: row;justify-content: space-around;">
+    <div class="container-fluid bg-trasparent my-4 p-3">
+        <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+            <div class="col">
+                <div class="card h-50 shadow-sm"> <img class="img-responsive" src="{% static 'assets/images/law1.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="clearfix mb-3">
+                                <h4>{{ pdf.course_title }} </h4>
+                            <span class="float-end price-hp">Added on {{pdf.created}}</span>
+                        </div>
+                        <h5 class="card-title">{{pdf.description}}</h5>
+                        <div class="text-center my-4">
+                            <a href="{{ pdf.pdf.url }}" class="btn btn-warning" download>Download PDF</a>
+                            <a href="{{ pdf.pdf.url }}" class="btn btn-primary" target="_blank">View PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+ {% endfor %}
+{% endblock %}
