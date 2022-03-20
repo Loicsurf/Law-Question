@@ -60,7 +60,7 @@ django_heroku.settings(locals())
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'/Users/enamal-yasseri/Desktop/PDF/reader/template'],
+        'DIRS': ['/Users/enamal-yasseri/Desktop/PDF/reader/template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
